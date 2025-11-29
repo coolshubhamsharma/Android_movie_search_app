@@ -1,29 +1,30 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { Stack } from "expo-router";
+import { StatusBar } from "react-native";
+import './globals.css';
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
+  return <>
 
-  if (!loaded) {
-    // Async font loading only occurs in development.
-    return null;
-  }
+    {/* keeps the battery percentage and other things hidden */}
+    <StatusBar hidden={true}/>
 
-  return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
-  );
+    <Stack>
+ 
+      {/* hides the routes on the top panel of the application */}
+      {/* (tabs) folder */}
+      <Stack.Screen  
+      name="(tabs)"
+      options={{headerShown:false}}
+      />
+
+      {/* movies folder */}
+      <Stack.Screen
+      name="movies/[id]"
+      options={{headerShown:false}}
+      />
+
+    </Stack>
+  </>;
 }
+
+//the above code inside stack removes the header route shown in the application
