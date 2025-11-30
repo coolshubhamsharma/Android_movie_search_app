@@ -1,50 +1,60 @@
-# Welcome to your Expo app 👋
+# 🎬 Mobile Movie App
+A cross-platform **React Native + Expo** application for browsing movies, searching titles, viewing trending results, and tracking user search analytics using **Appwrite backend services**.  
+Supports **Android**, **iOS (with Dev Client)**, and **Web**.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<img src="./assets/image3.png" />
 
-## Get started
+## ✨ Features
+- 🔎 Movie Search with debounce  
+- 🎞️ Trending Movies  
+- 🏆 Search Analytics Tracking  
+- 🌁 NativeWind UI  
+- 🚀 Android, iOS, Web  
+- 🔐 Optional Google Auth  
+- ⚡ Fast UI  
+- 🗂 TMDB API  
 
-1. Install dependencies
+<img src="./assets/image2.png"/>
 
-   ```bash
-   npm install
-   ```
+## 📱 Tech Stack
+- Expo SDK 54  
+- React Native 0.81  
+- React 19.1  
+- NativeWind  
+- Appwrite  
+- TMDB API  
+- Expo Router  
+- TypeScript  
 
-2. Start the app
+<img src ="./assets/image1.png"/>
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+## 🛠️ Installation
+```sh
+git clone https://github.com/yourusername/mobile_movie_app.git
+cd mobile_movie_app
+npm install --legacy-peer-deps
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🔧 Environment Variables
+Create `.env`:
+```
+EXPO_PUBLIC_MOVIE_API_KEY=YOUR_TMDB_API_KEY
+EXPO_PUBLIC_APPWRITE_ENDPOINT="https://cloud.appwrite.io/v1"
+EXPO_PUBLIC_APPWRITE_PROJECT_ID=YOUR_PROJECT_ID
+EXPO_PUBLIC_APPWRITE_DATABASE_ID=YOUR_DATABASE_ID
+EXPO_PUBLIC_APPWRITE_COLLECTION_ID=YOUR_COLLECTION_ID
+```
 
-## Learn more
+## ▶️ Run App
+```sh
+npx expo start -c
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## 📱 Platform Notes
+- Android: works fully  
+- iOS: needs Dev Client for OAuth  
+- Web: works  
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## ✨ Appwrite
+Tracks search counts + trending movies.
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
